@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_06_212846) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "client", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.text "name"
     t.text "phone"
     t.text "datestamps"
