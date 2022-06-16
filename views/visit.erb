@@ -23,40 +23,31 @@ $(function() {
 
   <div class="form-group">
     <label>Ваше имя</label>
-    <input name="username" type="text" class="form-control" placeholder="Ваше имя" value="<%= @username %>">
+    <input name="client[name]" type="text" class="form-control" placeholder="Ваше имя" value="">
   </div>
 
   <div class="form-group">
     <label>Ваш телефон</label>
-    <input name="phone" type="text" class="form-control" placeholder="Ваш телефон" value="<%= @phone %>">
+    <input name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон" value="">
   </div>
 
   <div class="form-group">
     <label>Когда вас ждать?</label>
     <!-- элемент input с id = datetimepicker1 -->
       <div class="input-group" id="datetimepicker1">
-        <input name="datetime" type="text" class="form-control"
-               placeholder="Введите дату и время" value="<%= @datetime %>" />
+        <input name="client[datestamps]" type="text" class="form-control"
+               placeholder="Введите дату и время" value="" />
         <span class="input-group-addon">
           <i class="glyphicon glyphicon-calendar"></i>
         </span>
       </div>
   </div>
 
-  <div class="form-group">
-    <label>Ваш парикмахер:</label>
-    <select name="barber" class="form-control">
- 
-      <% @barbers.each do |item| %>
-      <option <%= @barber == item['name']? 'selected' : ''%>><%= item['name']%></option>
-      <% end %>
-
-    </select>
-  </div>
+  
 
   <div class="form-group">
     <label>В какие цвета хотите себя окрасить: </label>
-    <select id="colour" name="colour">
+    <select id="colour" name="client[color]">
       <option value="#7bd148">Green</option>
       <option value="#5484ed">Bold blue</option>
       <option value="#a4bdfc">Blue</option>
