@@ -34,5 +34,7 @@ post '/visit' do
 		erb "<h2>Спасибо, Вы записаны!</h2>"
 	else
 		erb"<h2>Ошибка</h2>"
+		@error = c.errors.full_messages.first
+		erb :visit
 	end
 end
