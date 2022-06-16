@@ -48,7 +48,7 @@ $(function() {
     <select name="barber" class="form-control">
  
       <% @barbers.each do |item| %>
-      <option <%= @barber == item['barber_name']? 'selected' : ''%>><%= item['barber_name']%></option>
+      <option <%= @barber == item['name']? 'selected' : ''%>><%= item['name']%></option>
       <% end %>
 
     </select>
