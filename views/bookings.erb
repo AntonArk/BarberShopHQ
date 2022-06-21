@@ -1,6 +1,28 @@
 <h2>Список записавшихся</h2>
+
+<style>
+   th {
+    border: 1px solid #333;
+    padding: 6px;
+   }
+   td {
+    border: 1px solid #333;
+    padding: 6px;
+   }
+  </style>
+
+<table>
+  <tr>
+  	<th>Name</th>
+    <th>Phone</th>
+    <th>Date</th>
+  </tr>
+
 <% @clients.each do |client| %>
-	<p>
-		<a href="/client/<%= client.id %>"><%= client.name %></a> 
-	</p>
+  <tr>
+    <td> <a href="/client/<%= client.id %>"><%=  client.name  %></a> </td>
+    <td> <%=  client.phone  %> </td>
+    <td> <%=  client.datestamps  %> </td>
+  </tr>
 <% end %>
+</table>
